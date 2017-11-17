@@ -95,5 +95,13 @@ AddDefaultCharset UTF-8
 
 EnableSendfile on
 
+ExtendedStatus on
+
+<IfModule mod_status.c>
+  <Location /mod_status>
+    SetHandler server-status
+  </Location>
+</IfModule>
+
 # Load other configuration files
 IncludeOptional conf.d/*.conf
